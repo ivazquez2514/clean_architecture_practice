@@ -1,0 +1,8 @@
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('src/frameworks/persistence/db/config', 'config.js'),
+  'models-path': path.resolve('src/frameworks/persistence/db', 'models'),
+  'seeders-path': path.resolve('src/frameworks/persistence/db', 'seeders'),
+  'migrations-path': path.resolve('src/frameworks/persistence/db', 'migrations')
+}
