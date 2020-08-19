@@ -1,11 +1,8 @@
-import fetchTasks from './fetchTasks.interactor';
-import fetchTaskById from './fetchTaskById.interactor';
-import TaskDataSource from '../../dataSources/task.datasource';
-import TasksRepository from '../repositories/tasksRepository';
+import fetchAllRoles from './roles/fetchAllRoles.interfactor';
+import RolesRepository from '../repositories/rolesRepository';
+import Roles from '../../dataSources/rethink/entities/rol';
 
-const taskDataSource: TasksRepository = new TaskDataSource();
-
+const rolesRepository = new Roles();
 export default {
-    fetchTasks: fetchTasks(taskDataSource),
-    fetchTaskById: fetchTaskById(taskDataSource)
-}
+    fetchAllRoles: fetchAllRoles(rolesRepository)
+};
